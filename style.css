@@ -1,0 +1,117 @@
+:root {
+    --main-blue: rgb(10 88 202);
+    --main-brown:#3B3030;
+    --main-yellow:#FFF0D1;
+    --main-light-brown: #a2836e
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255 255 237);
+}
+/*public classes*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.padding100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.padding50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*end of public classes*/
+
+/*header*/
+nav .special-header {
+    color:var(--main-brown);
+    font-size: 25px;
+    margin: auto 0;
+    font-weight: bold;
+}
+nav li{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*end of header*/
+
+/*main*/
+.main{   
+}
+.main .container {
+    flex-direction: column;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+    color: var(--main-brown);
+}
+
+.special-header {
+    color: var(--main-brown);
+}
+
+form {
+    width: 400px;
+}
+
+form ul:hover {
+    cursor: pointer;
+}
+
+form ul > a {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+
+form li:hover {
+    cursor: pointer;
+    background-color: rgba(172, 172, 172, 0.39);
+}
+
+.main .badge{
+    background-color:var(--main-brown) ;
+}
+
+.main .btn{
+    background-color: var(--main-brown);
+    border-color: none;
+    color: white;
+}
+
+.main .btn:hover{
+   background-color: #3b3030e1;
+}
+@media (max-width:767px) {
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .special-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+/*end of main*/
