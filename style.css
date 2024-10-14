@@ -124,10 +124,16 @@ form li:hover {
  .card{
     margin: 0 auto 20px;
 }
+.restaurants-list img{
+    height: 214.5px;
+}
 /*end of restaurants list*/
 
 
 /* menues*/
+.menus.main-section{
+    background:url(./images/ju.jpg) no-repeat ;
+}
 .menus img{
     height: 175px;
 }
