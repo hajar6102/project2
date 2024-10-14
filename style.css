@@ -132,7 +132,7 @@ form li:hover {
 
 /* menues*/
 .menus.main-section{
-    background:url(./images/ju.jpg) no-repeat ;
+    /* background:url(./images/ju.jpg) no-repeat ; */
 }
 .menus img{
     height: 175px;
