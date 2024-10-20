@@ -1,0 +1,220 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FEFFED;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%; /* Allow body to take full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start content from the top */
+  align-items: center; /* Center the content horizontally */
+}
+
+/* Header container styling */
+header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px; /* Spacing for the header */
+  z-index: 1000; /* Ensure the header stays above other content */
+  background-color: #FEFFED; /* Background color for the header */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex; /* Flexbox layout for header */
+  justify-content: space-between; /* Space between logo/name and logout button */
+  align-items: center; /* Center items vertically */
+  padding: 10px;
+  margin-right: 6%;
+  margin-left: 3%;
+}
+
+.logo {
+  display: flex; /* Flex layout for logo and name */
+  align-items: center; /* Center items vertically within the logo */
+}
+
+.logo img {
+  width: 100px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and name */
+}
+
+.logout {
+  display: flex;
+  align-items: center; /* Vertically align the logout image */
+}
+
+.logout img {
+  width: 40px;
+  height: 40px; /* Ensure a consistent size for the profile image */
+  border-radius: 50%;
+}
+
+.logout-button {
+  padding: 10px 15px; /* Padding for the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #FEFFED; /* Color for the logout button */
+  color: #3B2F2F; /* Text color */
+  cursor: pointer; /* Pointer on hover */
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  color: #000000; /* Darker color on hover */
+  background-color: transparent;
+}
+
+/* Centered action buttons */
+/* Centered action buttons */
+.centered-action-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between the buttons */
+  margin-top: 150px; /* Space the buttons below the header */
+  margin-bottom: 20px;
+}
+
+.centered-action-buttons button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #2b2323;
+  position: relative; /* Make the button relative to position the underline */
+  transition: background-color 0.3s, color 0.3s; /* Transition for color changes */
+}
+
+.centered-action-buttons button::after {
+  content: ''; /* Empty content for the underline */
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 2px; /* Height of the underline */
+  background-color: #3B2F2F; /* Color of the underline */
+  bottom: 0; /* Position it at the bottom of the button */
+  left: 0; /* Start from the left */
+  transition: width 0.3s ease-in-out; /* Smoothly increase width */
+}
+
+.centered-action-buttons button:hover::after {
+  width: 100%; /* Fill the entire width on hover */
+}
+.centered-action-buttons button:hover {
+background-color: transparent;
+}
+
+
+
+/* Main container */
+.container {
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Set to 0 as the buttons are now placed above */
+  margin-bottom: 10%;
+  position: relative;
+  height: auto; /* Ensure container height is dynamic */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Padding to ensure spacing inside the form */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds the height */
+  max-height: 80vh; /* Set maximum height for the form area */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 90%; /* Ensure input fields take full width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dff0d8;
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Menu styles */
+/* Menu styles */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row to make the images smaller */
+  gap: 10px;
+  max-height: 400px; /* Limit height of the images section */
+  overflow-y: auto; /* Scroll only the images section */
+  justify-content: center;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 150px; /* Set a fixed width to make the items smaller */
+}
+
+.menu-item img {
+  width: 100%; /* Ensure the image fills the item */
+  height: 150px; /* Set a smaller height for the images */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+
+/* Add Item and Delete Button Styles */
+button {
+  background-color: #3B2F2F; /* Background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #2b2323; /* Darker background on hover */
+}
+
+/* Delete button specific styles */
+.delete-button {
+  background-color: #3B2F2F; /* Same background for delete button */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.delete-button:hover {
+  background-color: #2b2323; /* Darker background on hover */
+}
